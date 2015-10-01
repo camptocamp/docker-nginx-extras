@@ -3,7 +3,7 @@ FROM debian:jessie
 MAINTAINER Mickaël Canévet "mickael.canevet@camptocamp.com"
 
 RUN apt-get update && \
-    apt-get install -y ca-certificates nginx-extras && \
+    apt-get install -y ca-certificates nginx-extras liburi-encode-perl && \
     rm -rf /var/lib/apt/lists/*
 
 # forward request and error logs to docker log collector
